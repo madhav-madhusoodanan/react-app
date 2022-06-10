@@ -1,0 +1,353 @@
+@import "~antd/dist/antd.less";
+@import "~antd/lib/style/themes/dark.less";
+
+@white: #fff;
+@primary: #06be7f;
+@primary-4: #0c6e4d;
+@gray-1: #141414;
+@gray-2: #1d1d1d;
+@gray-3: #262626;
+@gray-4: #303030;
+@gray-5: #434343;
+@gray-6: #5a5a5a;
+@gray-7: #7d7d7d;
+@gray-9: #dbdbdb;
+
+* {
+  background-color: @gray-2;
+  color: @white;
+}
+.ant-divider {
+  width: 100%;
+  background-color: @gray-4;
+  height: 2px;
+  margin: 0;
+}
+
+.sidebar {
+  width: 400px;
+}
+
+.ant-modal-content .ant-btn {
+  height: unset;
+}
+
+.ant-btn.confirm {
+  background-color: @primary;
+  span {
+    background-color: unset;
+  }
+}
+
+/* Colors */
+.bg-white {
+  background-color: @white;
+}
+.bg-primary {
+  background-color: @primary;
+}
+.bg-primary-4 {
+  background-color: @primary-4;
+}
+.text-gray-1 {
+  color: @gray-1;
+}
+.bg-gray-1 {
+  background-color: @gray-1;
+}
+.text-gray-4 {
+  color: @gray-4;
+}
+.border-gray-4 {
+  border-color: @gray-4;
+  border-radius: 4px;
+  border-width: 2px;
+}
+.text-gray-7 {
+  color: @gray-7;
+}
+.bg-gray-9 {
+  background-color: @gray-9;
+}
+.text-gray-9 {
+  color: @gray-9;
+}
+.bg-gradient {
+  background: linear-gradient(90deg, @primary 0%, #a3fad1 100%);
+}
+
+/* Fonts */
+.primary-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+.secondary-font {
+  font-family: "Roboto Mono", monospace;
+}
+.third-font {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Tab styles */
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: @primary;
+}
+.ant-tabs-tab .ant-tabs-tab-btn {
+  @apply secondary-font;
+  height: 15px;
+}
+.ant-tabs-ink-bar {
+  background: @primary;
+}
+
+/* App */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: initial;
+
+  @media (max-width: 720px) {
+    overflow-y: scroll;
+    height: auto;
+    background-color: @gray-2;
+  }
+}
+
+/* List styles */
+.list {
+  .list-item {
+    padding: 4px 0px;
+  }
+}
+
+/* Button styles */
+.btn {
+  color: @white;
+  border: 1px solid @gray-5;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.highlight,
+.highlight * {
+  background-color: @gray-3;
+  border-color: @gray-6;
+}
+.img-small {
+  width: 31px;
+  height: 31px;
+  border-radius: 4px;
+}
+.connect-wallet {
+  background-color: @primary;
+}
+.connect-wallet-button {
+  font-size: 16px;
+
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    margin-right: 0.75rem;
+  }
+}
+.connected {
+  background-color: transparent;
+  border: 1px solid @primary;
+  :hover {
+    cursor: default;
+  }
+}
+
+/* Plot detail styles */
+.plot-detail > div.flex {
+  margin: 24px;
+}
+
+/* Notification styles */
+.ant-notification * {
+  color: #000;
+  background-color: #fff;
+}
+
+.logo-display {
+  border-color: @gray-4;
+}
+
+/* search bar styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.search-plots {
+  border-color: @gray-4;
+  * {
+    border-color: @gray-4;
+    background-color: transparent;
+  }
+
+  @media (max-width: 720px) {
+    width: 35%;
+  }
+
+  @media (max-width: 450px) {
+    width: 50%;
+  }
+}
+
+:root {
+  --toastify-color-light: @gray-2;
+}
+.error * {
+  color: white;
+  @apply secondary-font;
+}
+.bn-notify-custom * {
+  background-color: @gray-2 !important;
+  color: white;
+  @apply secondary-font;
+}
+
+/* Web3 Modal styles */
+.web3modal-modal-hitbox {
+  background-color: @gray-1;
+}
+.web3modal-provider-container {
+  background-color: @gray-2 !important;
+  * {
+    color: white;
+    background-color: inherit !important;
+  }
+}
+#walletconnect-wrapper {
+  background-color: @gray-2 !important;
+  * {
+    color: white;
+    background-color: inherit !important;
+  }
+}
+
+// Scrollbar styles
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  left: -100px !important;
+
+  @media (max-width: 720px) {
+    width: 0;
+  }
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: @gray-5;
+  border-radius: 20px;
+  border-left: 10px @gray-2 solid;
+  border-top: 10px @gray-2 solid;
+  border-bottom: 10px @gray-2 solid;
+}
+
+/* Plot Detail */
+.plot-detail-content {
+  overflow-y: scroll;
+  max-height: 75vh;
+
+  @media (max-width: 1024px) {
+    overflow-y: initial;
+    padding-bottom: 2rem;
+    max-height: initial;
+  }
+}
+
+/* BrowsePlots Layout */
+.progress-bar-indicator {
+  margin-left: 3rem;
+
+  @media (max-width: 475px) {
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 425px) {
+    margin-left: 0;
+  }
+}
+
+.ant-tabs-content-holder {
+  overflow-y: scroll;
+  margin-bottom: 0.75rem;
+
+  @media (max-width: 720px) {
+    overflow-y: initial;
+  }
+}
+
+.search-plots-input {
+  width: 100%;
+
+  @media (max-width: 500px) {
+    max-width: 85%;
+  }
+}
+
+.browse-plots-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 3rem 4rem 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem repeat(2, 4rem) 300px 4rem 5fr;
+  }
+
+  // Responsive for mobile landscape screens
+  @media (max-height: 500px) {
+    grid-template-rows: 3rem repeat(2, 4rem) 300px 4rem 600px;
+  }
+}
+
+.progress-bar {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.logo-link {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.connect-wallet-section {
+  grid-area: 2 / 2 / 3 / 3;
+  border-color: @gray-4;
+  justify-content: flex-end;
+}
+.plot-detail {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.plot-tabs {
+  grid-area: 3 / 1 / 4 / 2;
+  width: 100%;
+}
+.plot-map {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+@media (max-width: 1024px) {
+  .progress-bar {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .logo-link {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .connect-wallet-section {
+    grid-area: 3 / 1 / 4 / 2;
+    justify-content: center;
+    max-width: 100vw;
+  }
+  .plot-map {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .plot-tabs {
+    grid-area: 5 / 1 / 7 / 2;
+    max-width: 100vw;
+  }
+  .plot-detail {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+}
